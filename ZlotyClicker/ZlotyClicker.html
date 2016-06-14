@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Startseite</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <div class="container">
+        </br>
+
+
+        <img id="Logo" src="logo.png" class="img-responsive" alt="Spielwiese">
+        <div id="container">
+            <input id="toggle" type="checkbox"><label for="toggle">&equiv;</label>
+            <div class="content">
+            </div>
+            <div class="slide-menu">
+                <nav class="menu">
+                    <li><a href="index.html" id="home">Home</a></li>
+                    <li><a href="ZlotyClicker.html" id="zlotyClicker">Zloty Clicker</a></li>
+                    <li><a href="Headshooter.html" id="headShooter">Head Shooter</a></li>
+                    <li><a href="impressum.html" id="impressum">Impressum</a></li>
+                </nav>
+            </div>
+        </div>
+        <div id="wbody">
+            <h1> Money Clicker</h1>
+            <p>Spielerische Heranf&uumlhrung an das Rechnen und umgehen mit W&aumlhrungen bzw. Geld.</p>
+            <hr>
+            <div id="click"><button name="onClick" onclick="onClick()"><img src="zlotti.jpg" id="bild"></button></div>
+            <div id="geld"> <input type="text" id="clicks" value="0" readonly></input><p id="währung">zloty</p></div>
+
+
+            <div>
+                <table>
+                    <tr>
+                        <th>Einkommen</th>
+                        <th>Kosten</th>
+                        <th>Upgrade</th>
+                    </tr>
+
+                    <tr>
+                        <td>Sie verdienen <a id="wert">1000</a> Zloty pro Click.</td>
+                        <td id="kostenclick">25000</td>
+                        <td><button name="onClick" id="upgrade" onClick="doUp()" style="background: transparent "><img src="Raise.png" width="25" height="25"></button></td>
+                    </tr>
+
+                    <tr>
+                        <td>Sie verdienen <a id="wert1">0</a> Zloty pro Sekunde.</td>
+                        <td id="kostensec">20000</td>
+                        <td><button name="onClick1" id="upgradeClick" onClick="interval()" style="background: transparent"><img src="Raise.png" width="25" height="25"></button></td>
+                    </tr>
+
+                    <tr>
+                        <td>Dollar freischalten </td>
+                        <td id="kostendollar">100000 Zloty</td>
+                        <td><button name="onClick1" id="upgradeDollar" onClick="dollarfreischalten()" style="background: transparent"><img src="Raise.png" width="25" height="25"></button></td>
+                    </tr>
+
+                    <tr>
+                        <td>Pfund freischalten </td>
+                        <td id="kostenPfund">1000000 Zloty</td>
+                        <td><button name="onClick1" id="upgradePfund" onClick="pfundfreischalten()" style="background: transparent"><img src="Raise.png" width="25" height="25"></button></td>
+                    </tr>
+
+                    <tr>
+                        <td>Yen freischalten </td>
+                        <td id="kostenYen">100000 Zloty</td>
+                        <td><button name="onClick1" id="upgradeYen" onClick="yenfreischalten()" style="background: transparent"><img src="Raise.png" width="25" height="25"></button></td>
+                    </tr>
+
+                    <tr>
+                        <td>Euro freischalten </td>
+                        <td id="kostenEuro">100000 Zloty</td>
+                        <td><button name="onClick1" id="upgradeEuro" onClick="eurofreischalten()" style="background: transparent"><img src="Raise.png" width="25" height="25"></button></td>
+                    </tr>
+                </table>
+            </div>
+
+            <select id="dropdown">
+                <option id="zloty" onClick="umrechnen(0)" selected="selected">Zloty</option>
+                <option id="dollar" onClick="umrechnen(1)" style="visibility: hidden;">Dollar</option>
+                <option id="euro" onClick="umrechnen(2)" style="visibility: hidden;">Euro</option>
+                <option id="yen" onClick="umrechnen(3)" style="visibility: hidden;">Yen</option>
+                <option id="pfund" onClick="umrechnen(4)" style="visibility: hidden;">Pfund</option>
+            </select>
+
+            <script type="text/javascript" src="zloty.js">
+            </script>
+
+
+        </div>
+    </div>
+
+    <script language="javascript" type="text/javascript" src="InteKidz.js"></script>
+</body>
+</html>
