@@ -22,8 +22,8 @@
             </div>
             <div class="slide-menu">
                 <nav class="menu">
-                    <li><a href="index.html" id="home">Home</a></li>
-                    <li><a href="ZlotyClicker.html" id="zlotyClicker">Zloty Clicker</a></li>
+                    <li><a href="..\index.html" id="home">Home</a></li>
+                    <li><a href="\Users\Killa\Documents\gaspode123.github.io\ZlotyClicker" id="zlotyClicker">Zloty Clicker</a></li>
                     <li><a href="Headshooter.html" id="headShooter">Head Shooter</a></li>
                     <li><a href="impressum.html" id="impressum">Impressum</a></li>
                 </nav>
@@ -33,18 +33,20 @@
             <h1> Money Clicker</h1>
             <p>Spielerische Heranf&uumlhrung an das Rechnen und umgehen mit W&aumlhrungen bzw. Geld.</p>
             <hr>
-            <div id="click"><button name="onClick" onclick="onClick()"><img src="zlotti.jpg" id="bild"></button></div>
-            <div id="geld"> <input type="text" id="clicks" value="0" readonly></input><p id="währung">zloty</p></div>
+            <div id="click"><button name="onClick" onclick="onClick()" ><img src="zlotti.jpg" id="bild"></button></div>
+            <div id="geld"> <input type="text" id="clicks" value="0" readonly></input><a id="währung">zloty</a></div>
 
 
             <div>
-                <table>
-                    <tr>
+                <table class="table table-hover" style="background-color: white; position: absolute; top: 650px; width: 970px;" >
+                  <thead>
+                     <tr>
                         <th>Einkommen</th>
                         <th>Kosten</th>
                         <th>Upgrade</th>
-                    </tr>
-
+                     </tr>
+                  </thead>
+                  <tbody>
                     <tr>
                         <td>Sie verdienen <a id="wert">1000</a> Zloty pro Click.</td>
                         <td id="kostenclick">25000</td>
@@ -80,10 +82,11 @@
                         <td id="kostenEuro">100000 Zloty</td>
                         <td><button name="onClick1" id="upgradeEuro" onClick="eurofreischalten()" style="background: transparent"><img src="Raise.png" width="25" height="25"></button></td>
                     </tr>
+                  </tbody>
                 </table>
             </div>
 
-            <select id="dropdown">
+            <select id="dropdown" style="position: absolute; top: 285px; left: 830px;">
                 <option id="zloty" onClick="umrechnen(0)" selected="selected">Zloty</option>
                 <option id="dollar" onClick="umrechnen(1)" style="visibility: hidden;">Dollar</option>
                 <option id="euro" onClick="umrechnen(2)" style="visibility: hidden;">Euro</option>
